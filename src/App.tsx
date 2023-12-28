@@ -1,6 +1,7 @@
 import { FC } from 'react';
 
 import './style.css';
+import { Example1 } from './Example1';
 
 export const App: FC<{ name: string }> = ({ name }) => {
   return (
@@ -33,8 +34,16 @@ export const App: FC<{ name: string }> = ({ name }) => {
               returned.
             </li>
           </ol>
+          <li>
+            <img src="/redering-image.jpeg" height="200px"/>
+          </li>
         </li>
+        <li>
+          As a component’s memory, state is not like a regular variable that disappears after your function returns. State actually “lives” in React itself—as if on a shelf!—outside of your function. When React calls your component, it gives you a snapshot of the state for that particular render.
+        </li>
+        <img src="/statesnapshotimage.jpeg" height="200px" />
       </ul>
+      <Example1 />
     </div>
   );
 };
